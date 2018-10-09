@@ -1,0 +1,2 @@
+class Toner < ApplicationRecord
+end

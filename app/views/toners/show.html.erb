@@ -1,0 +1,82 @@
+<p  align="center" id="notice"><%= notice %></p>
+<h1 align="center">Resgistro do toner - <%= @toner.part_number%></h1>
+<hr width="50%">
+<div class="container">
+  <ul>
+    <li>
+      <p>
+        <strong>Cliente:</strong>
+        <%= @toner.client %>
+      </p>
+    </li>
+    <li>
+      <p>
+        <strong>Dispositivo:</strong>
+        <%= @toner.device %>
+      </p>
+    </li>
+    <li>
+      <p>
+        <strong>Nº Serial:</strong>
+        <%= @toner.serial_number %>
+      </p>
+    </li>
+    <li>
+      <p>
+        <strong>Nº do Suprimento:</strong>
+        <%= @toner.part_number %>
+      </p>
+    </li>
+    <li>
+      <p>
+        <strong>Cor:</strong>
+        <%= @toner.tcolor %>
+      </p>
+    </li>
+    <li>
+      <p>
+        <strong>Rendimento:</strong>
+        <%= @toner.tyield %>
+      </p>
+    </li>
+    <li>
+      <p>
+        <strong>Contador Inicial:</strong>
+        <%= @toner.count_ini %>
+      </p>
+    </li>
+    <li>
+      <p>
+        <strong>Contador Final:</strong>
+        <%= @toner.count_end %>
+      </p>
+    </li>
+    <li>
+      <p>
+        <strong>Nível Inicial:</strong>
+        <%= @toner.nvl_ini %>
+      </p>
+    </li>
+    <li>
+      <p>
+        <strong>Nível Final:</strong>
+        <%= @toner.nvl_end %>
+      </p>
+    </li>
+    <li>
+      <p>
+        <strong>Intervalo de Pesquisa:</strong>
+        <%= @toner.date_in %> / <%= @toner.date_out %>
+      </p>
+    </li>
+  </ul>
+  <div class="alert alert-primary">
+    <strong>
+        <%= @result %>
+      </strong>
+  </div>
+</div>
+<div align="center">
+  <%= link_to 'Editar', edit_toner_path(@toner) %> |
+  <%= link_to 'Voltar', toners_path %>
+</div>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client: MyString
+  device: MyString
+  serial_number: MyString
+  part_number: MyString
+  tcolor: MyString
+  tyield: 1
+  count_ini: 1
+  count_end: 1
+  nvl_ini: 1.5
+  nvl_end: 1.5
+  date_in: 2018-10-09
+  date_out: 2018-10-09
+
+two:
+  client: MyString
+  device: MyString
+  serial_number: MyString
+  part_number: MyString
+  tcolor: MyString
+  tyield: 1
+  count_ini: 1
+  count_end: 1
+  nvl_ini: 1.5
+  nvl_end: 1.5
+  date_in: 2018-10-09
+  date_out: 2018-10-09

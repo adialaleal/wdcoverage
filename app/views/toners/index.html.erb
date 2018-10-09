@@ -1,0 +1,52 @@
+<p align="center" id="notice"><%= notice %></p>
+
+<h1 align="center">Registro de Toners</h1>
+<hr width="50%">
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Cliente</th>
+      <th>Dispositivo</th>
+      <th>Nº Serial</th>
+      <th>Número do Suprimento</th>
+      <th>Cor</th>
+      <th>Rendimento</th>
+      <th>Contador Inicial</th>
+      <th>Contador Final</th>
+      <th>Nível inicial</th>
+      <th>Nível Final</th>
+      <th>Data de Entrada</th>
+      <th>Data de Saída</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @toners.each do |toner| %>
+      <tr>
+        <td><%= toner.client %></td>
+        <td><%= toner.device %></td>
+        <td><%= toner.serial_number %></td>
+        <td><%= toner.part_number %></td>
+        <td><%= toner.tcolor %></td>
+        <td><%= toner.tyield %></td>
+        <td><%= toner.count_ini %></td>
+        <td><%= toner.count_end %></td>
+        <td><%= toner.nvl_ini %></td>
+        <td><%= toner.nvl_end %></td>
+        <td><%= toner.date_in %></td>
+        <td><%= toner.date_out %></td>
+        <td><%= link_to 'Ver', toner %></td>
+        <td><%= link_to 'Editar', edit_toner_path(toner) %></td>
+        <td><%= link_to 'Excluir', toner, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div align="center">
+<%= link_to 'Novo Registro', new_toner_path %>
+</div>
