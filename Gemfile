@@ -15,6 +15,10 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 #Devise gem - For User Authentication.
 gem 'devise', '~> 4.4', '>=4.4.3'
+# Bootstrap Gem
+gem 'bootstrap', '~> 4.1', '>= 4.1.3'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
