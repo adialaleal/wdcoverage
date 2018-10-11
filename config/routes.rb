@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admins
+  devise_for :members
 root to: 'toners#index'
 	devise_scope :users do
 		get "login", to: 'devise/sessions#new'
