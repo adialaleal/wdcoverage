@@ -29,7 +29,7 @@
         <td><%= toner.tcolor %></td>
         <td><%= toner.date_in %></td>
         <td><%= toner.date_out %></td>
-        <td><%= @coverage  %></td>
+        <td><%= toner.calc_cover  %></td>
         <td><%= @prod %></td>
         <td><%= link_to 'Ver', toner %></td>
         <td><%= link_to 'Excluir', toner, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
