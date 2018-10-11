@@ -28,8 +28,7 @@ class TonersController < ApplicationController
     @description = "Este relatório tomou como base o toner com um nível inicial de #{nvl_i.to_i}%,
      correspondente à #{amount_ini} páginas, e seu nível final de #{nvl_e.to_i}% correspondendo à #{amount_end} páginas.
      Este intervalo corresponde ao rendimento de #{amount_ini.to_i - amount_end.to_i} páginas."
-    @result = "No intervalo informado, foram feitas #{prod} páginas, com uma área de cobertura de #{@coverage}%."
-    
+    @result = "No intervalo informado, foram feitas #{prod} páginas, com uma média de área de cobertura de #{@coverage}%."
   end
 
   # GET /toners/new
