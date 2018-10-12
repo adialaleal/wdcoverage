@@ -15,5 +15,6 @@ class Toner < ApplicationRecord
     ryield = (amount_ini - amount_end)
     # Calculo da área de cobertura do toner especificado.
     (ryield * pdefault) / prod.to_f
+    ryield.round(2)
   end  
 end
