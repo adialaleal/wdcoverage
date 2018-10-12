@@ -14,7 +14,8 @@ class Toner < ApplicationRecord
     # Calculo do real rendimento julgando os níveis especificados de toner.
     ryield = (amount_ini - amount_end)
     # Calculo da área de cobertura do toner especificado.
-    (ryield * pdefault) / prod.to_f
-    ryield.round(2)
+    coverage = (ryield * pdefault) / prod.to_f
+    coverage.round(2)
+    
   end  
 end
