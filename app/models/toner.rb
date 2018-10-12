@@ -16,6 +16,9 @@ class Toner < ApplicationRecord
     # Calculo da área de cobertura do toner especificado.
     coverage = (ryield * pdefault) / prod.to_f
     cover = "#{coverage.round(2)}%"
-    
-  end  
+  end
+  def calc_prod
+    prod = self.count_end.to_i - self.count_ini.to_i
+    prod.round(2)
+  end
 end
