@@ -17,8 +17,16 @@ class Toner < ApplicationRecord
     coverage = (ryield * pdefault) / prod.to_f
     cover = "#{coverage.round(2)}%"
   end
+  
   def calc_prod
     prod = self.count_end.to_i - self.count_ini.to_i
     prod.round(2)
+  end
+
+  def tdescription
+    description = "Este relatório tomou como base o toner com um nível inicial de #{nvl_i.to_i}%,
+     correspondente à #{amount_ini} páginas, e seu nível final de #{nvl_e.to_i}% correspondendo à #{amount_end} páginas.
+     Este intervalo corresponde ao rendimento de #{amount_ini.to_i - amount_end.to_i} páginas."
+    result = "No intervalo informado, foram feitas #{prod.to_i} páginas, com uma média de área de cobertura de #{cover}%."
   end
 end
